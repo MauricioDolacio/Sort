@@ -224,6 +224,7 @@ int main(void) {
     int i, n, met, vet[1000], prox = 0;
     printf("---- ALGORITIMO DE SORTEAMENTO ----\n");
     printf("[1] - selectionSort \n[2] - BubbleSort \n[3] - insertionSort \n[4] - binaryInsertionSort \n[5] - quickSort \n[6] - heapSort \n[7] - mergeSort \n[8] - bucketSort \n");
+    //Pede ao usuario para que selecione um dos métodos inserindo um numero
     while(prox == 0) {
         printf("\nDigite o numero do metodo que deseja utilizar: ");
         scanf("%d", &met);
@@ -233,7 +234,8 @@ int main(void) {
             printf("Digite um numero valido!\n");
         }
     }
-
+    
+    //Pede ao usuario para que insira a quantidade de numeros que terão na lista
     prox = 0;
     while(prox == 0) {
         printf("\nDigite a quantidade de numeros que deseja colocar: ");
@@ -244,10 +246,12 @@ int main(void) {
             printf("Digite um numero valido!\n");
         }
     }
-
+    
+    //Pede ao usuario para que insira os numeros que deseja ordenar
     printf("\nDigite os numeros a serem ordenados: ");
     for (i = 0; i < n; i++) scanf("%d", &vet[i]);
-
+    
+    //Verifica qual método foi escolhido e ordena a lista
     prox = 0;
     while(prox == 0) {
         if(met == 1) {
@@ -293,7 +297,8 @@ int main(void) {
             prox = 1;
         }
     }
-
+    
+    //Imprime a lista ordenada
     printf("\n\nConclusao: \n");
     for(int i=0; i<n; i++){
         printf("%d ", vet[i]);
